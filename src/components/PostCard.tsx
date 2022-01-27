@@ -36,7 +36,14 @@ const PostCard: React.FC = ({ post }: any) => {
         <CalendarIcon className='-mt-1 mr-2 inline h-5 w-5 text-red-300' />
         <span className=''>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
       </div>
-      <h2 className='mx-2 text-center'>{post.excerpt}</h2>
+      <h2 className='mb-8 px-4 text-center font-light font-normal '>{post.excerpt}</h2>
+      <div className='text-center'>
+        <Link href={`/post/${post.slug}`}>
+          <span className='text-md inline-block cursor-pointer rounded-full bg-pink-500 px-8 py-3 font-medium text-white transition duration-500 hover:-translate-y-1'>
+            もっと読む
+          </span>
+        </Link>
+      </div>
     </div>
   );
 };

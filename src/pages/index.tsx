@@ -17,12 +17,12 @@ export default function Home({ posts }: any) {
             <PostCard key={post.title} post={post.node} />
           ))}
         </div>
-      </div>
 
-      <div className='cols-span-1 lg:col-span-4'>
-        <div className='relative top-8 lg:sticky'>
-          <PostWidget />
-          <Categories />
+        <div className='col-span-1 lg:col-span-4'>
+          <div className='relative top-8 lg:sticky'>
+            <PostWidget />
+            <Categories />
+          </div>
         </div>
       </div>
     </div>
